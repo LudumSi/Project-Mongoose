@@ -10,12 +10,12 @@ obj/items
 				usr.hand = src
 				if(usr.hand2 == src)
 					usr.hand2 = null
-				screen_loc = "6,1"
+				screen_loc = "9,1"
 			else if(usr.actvhand == 2)
 				usr.hand2 = src
 				if(usr.hand == src)
 					usr.hand = null
-				screen_loc = "5,1"
+				screen_loc = "8,1"
 			src.loc = usr
 			usr.client.screen += src
 	proc/drop()

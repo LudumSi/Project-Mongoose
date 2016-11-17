@@ -1,0 +1,27 @@
+"a" = (/turf/walls/concrete,/area)
+"b" = (/turf/floors/wasteland,/area)
+"c" = (/obj/items/ball,/turf/floors/wasteland,/area)
+"d" = (/turf/floors/spawn,/area)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaa
+abbbbaabbaabbaabbbba
+abbbbaabbaabbaabbbba
+abbbbbabbaabbabbbbba
+abbbbbbbbbbbbbbbbbba
+aaabbbbbbbbbbbbbbaaa
+aaaabbbbbbbbbbbbaaaa
+abbbbbbbbcbbbbbbbbba
+abbbbbbbbbbbbbbbbbba
+aaaabbbbbbdbbbbbaaaa
+aaaabbbbbbbbbbbbaaaa
+abbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbba
+aaaabbbbbbbbbbbbaaaa
+aaabbbbbbbbbbbbbbaaa
+abbbbbbbbbbbbbbbbbba
+abbbbbabbaabbabbbbba
+abbbbaabbaabbaabbbba
+abbbbaabbaabbaabbbba
+aaaaaaaaaaaaaaaaaaaa
+"}

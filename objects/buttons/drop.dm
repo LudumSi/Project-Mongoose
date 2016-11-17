@@ -1,7 +1,7 @@
 /obj/buttons/drop
 
 	icon_state = "halfbutton"
-	screen_loc = "7,1"
+	screen_loc = "10,1"
 
 	Click()
 		if(!(usr.holding == null))

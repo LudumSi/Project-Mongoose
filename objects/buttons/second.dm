@@ -1,7 +1,7 @@
 /obj/buttons/second
 
 	icon_state = "buttonbase"
-	screen_loc = "5,1"
+	screen_loc = "8,1"
 
 	Click()
 		usr.actvhand = 2
