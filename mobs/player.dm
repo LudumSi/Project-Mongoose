@@ -1,12 +1,18 @@
 /mob/player
 
-	icon_state = "player"
+	name = "Unkown"
+	desc = "A human bean"
 
-	var/holding = null
+	icon_state = "player"
 
 	Login()
 		name = input("What is your name?") as text
+
+		src.client.screen += new/obj/buttons/holding
+		src.client.screen += new/obj/buttons/drop
+
 		loc = locate(/turf/floors/spawn)
+
 
 	verb
 		say(msg as text)
