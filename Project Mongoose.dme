@@ -7,6 +7,14 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+#define FILE_DIR "areas"
+#define FILE_DIR "mobs"
+#define FILE_DIR "objects"
+#define FILE_DIR "objects/items"
+#define FILE_DIR "objects/structures"
+#define FILE_DIR "turfs"
+#define FILE_DIR "turfs/floors"
+#define FILE_DIR "turfs/walls"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -15,11 +23,16 @@
 // BEGIN_INCLUDE
 #include "atom.dm"
 #include "defaults.dm"
+#include "map_1.dmm"
 #include "areas\areas.dm"
 #include "mobs\mobs.dm"
+#include "mobs\player.dm"
 #include "objects\objects.dm"
 #include "objects\items\items.dm"
 #include "objects\structures\structures.dm"
 #include "turfs\turfs.dm"
+#include "turfs\floors\floors.dm"
+#include "turfs\floors\spawn.dm"
+#include "turfs\walls\walls.dm"
 // END_INCLUDE
 
