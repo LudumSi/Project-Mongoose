@@ -32,6 +32,7 @@
 #include "objects\buttons\buttons.dm"
 #include "objects\buttons\drop.dm"
 #include "objects\buttons\holding.dm"
+#include "objects\buttons\second.dm"
 #include "objects\items\ball.dm"
 #include "objects\items\items.dm"
 #include "objects\structures\structures.dm"
