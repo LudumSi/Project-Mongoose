@@ -4,6 +4,6 @@ turf/floors
 	desc = "Looks pretty shit"
 
 	icon = 'floors.dmi'
-	icon_state = "wasteland"
+	icon_state = "floor"
 	density = 0
 	opacity = 0

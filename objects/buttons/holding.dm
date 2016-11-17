@@ -1,7 +1,7 @@
 /obj/buttons/holding
 
 	icon_state = "selected"
-	screen_loc = "6,1"
+	screen_loc = "9,1"
 
 	Click()
 		usr.actvhand = 1
