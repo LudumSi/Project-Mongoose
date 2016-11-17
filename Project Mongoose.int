@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1479352797
-DIR: mobs objects objects\items objects\structures turfs turfs\floors turfs\walls 
+LAST_COMPILE_TIME: 1479401020
+DIR: mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: mobs\player.dm
-FILE: mobs\player.dm
+WINDOW: mobs\player.dm;objects\buttons\buttons.dm;objects\buttons\buttons.dmi;objects\buttons\holding.dm;objects\items\items.dm;mobs\mobs.dm;defaults.dm;objects\buttons\drop.dm;objects\items\ball.dm;turfs\floors\floors.dm;turfs\walls\walls.dm;objects\items\items.dmi;map_1.dmm
+FILE: objects\buttons\holding.dm
 */
 // END_INTERNALS

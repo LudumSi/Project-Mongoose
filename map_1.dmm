@@ -1,14 +1,15 @@
 "a" = (/turf/walls,/area)
 "b" = (/turf/floors,/area)
-"c" = (/turf/floors/spawn,/area)
+"c" = (/obj/items/ball,/turf/floors,/area)
+"d" = (/turf/floors/spawn,/area)
 
 (1,1,1) = {"
 aaaaaaaaaa
 abbbbbbbba
 abbaaabbba
 abbbbbbbba
-abbbbbabba
 abbbcbabba
+abbbdbabba
 abbbbbbbba
 abaabbabaa
 abbbbababa
