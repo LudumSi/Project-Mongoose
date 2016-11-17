@@ -1,0 +1,25 @@
+// DM Environment file for Project Mongoose.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "atom.dm"
+#include "defaults.dm"
+#include "areas\areas.dm"
+#include "mobs\mobs.dm"
+#include "objects\objects.dm"
+#include "objects\items\items.dm"
+#include "objects\structures\structures.dm"
+#include "turfs\turfs.dm"
+// END_INCLUDE
+

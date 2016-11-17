@@ -1,0 +1,11 @@
+// BEGIN_INTERNALS
+/*
+LAST_COMPILE_TIME: 1479346566
+DIR: areas mobs objects objects\items objects\structures turfs 
+AUTO_FILE_DIR: ON
+MAP_ICON_TYPE: 0
+LAST_COMPILE_VERSION: 510.1347
+WINDOW: defaults.dm;atom.dm;areas\areas.dm;mobs\mobs.dm;objects\objects.dm;objects\items\items.dm;objects\structures\structures.dm;turfs\turfs.dm;Project Mongoose.dme
+FILE: mobs\mobs.dm
+*/
+// END_INTERNALS
