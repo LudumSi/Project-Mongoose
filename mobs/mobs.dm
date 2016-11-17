@@ -6,3 +6,6 @@ mob
 	step_size = 32
 
 	var/holding = null
+	var/hand = null
+	var/hand2 = null
+	var/actvhand = 1

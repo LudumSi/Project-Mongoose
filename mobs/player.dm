@@ -9,6 +9,7 @@
 		name = input("What is your name?") as text
 
 		src.client.screen += new/obj/buttons/holding
+		src.client.screen += new/obj/buttons/second
 		src.client.screen += new/obj/buttons/drop
 
 		loc = locate(/turf/floors/spawn)
