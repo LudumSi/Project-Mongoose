@@ -4,6 +4,7 @@ obj/items
 	density = 0
 
 	verb/pickup()
+		set src in range(1)
 		if(usr.holding == null)
 			usr.holding = src
 			if(usr.actvhand == 1)
@@ -18,6 +19,7 @@ obj/items
 				screen_loc = "8,1"
 			src.loc = usr
 			usr.client.screen += src
+
 	proc/drop()
 		if(usr.holding == src)
 			usr.holding = null
@@ -29,6 +31,10 @@ obj/items
 			src.loc = usr.loc
 
 	Click()
-		pickup()
+		if(usr.holding == null)
+			pickup()
+		else
+			clicked()
+
 
 

@@ -1,1 +1,2 @@
 area
+	invisibility = 100
