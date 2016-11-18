@@ -23,8 +23,10 @@
 
 // BEGIN_INCLUDE
 #include "atom.dm"
+#include "client.dm"
 #include "defaults.dm"
 #include "map_2.dmm"
+#include "fonts.dms"
 #include "areas\areas.dm"
 #include "mobs\mobs.dm"
 #include "mobs\player.dm"

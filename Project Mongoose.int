@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1479417273
-DIR: mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
+LAST_COMPILE_TIME: 1479429911
+DIR: areas mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: turfs\walls\walls.dmi;turfs\walls\walls.dm;turfs\floors\floors.dmi;turfs\floors\wasteland.dm;turfs\floors\floors.dm;turfs\walls\concrete.dm;defaults.dm;map_2.dmm;objects\buttons\buttons.dm;objects\buttons\drop.dm;objects\buttons\holding.dm;objects\buttons\second.dm;objects\items\items.dm;objects\buttons\buttons.dmi
-FILE: objects\buttons\buttons.dmi
+WINDOW: turfs\walls\walls.dmi;turfs\walls\walls.dm;turfs\floors\floors.dmi;turfs\floors\wasteland.dm;turfs\floors\floors.dm;turfs\walls\concrete.dm;defaults.dm;map_2.dmm;objects\buttons\holding.dm;objects\buttons\buttons.dmi;objects\items\items.dm;objects\objects.dm;atom.dm;fonts.dms;objects\items\items.dmi;areas\areas.dm;areas\areas.dmi;mobs\mobs.dmi;client.dm
+FILE: mobs\mobs.dmi
 */
 // END_INTERNALS
