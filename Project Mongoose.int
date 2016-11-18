@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1479503019
+LAST_COMPILE_TIME: 1479503538
 DIR: areas mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: mobs\mobs.dmi
-FILE: mobs\mobs.dmi
+WINDOW: mobs\mobs.dmi;mobs\player.dm;defaults.dm
+FILE: mobs\player.dm
 */
 // END_INTERNALS
