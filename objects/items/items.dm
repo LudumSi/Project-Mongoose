@@ -4,6 +4,7 @@ obj/items
 	density = 0
 
 	var/list/properties
+	var/list/destroy
 
 	verb/pickup()
 		set src in range(1)
@@ -38,6 +39,12 @@ obj/items
 			if(usr.holding == null)
 				pickup()
 			else
+				var/i
+				if(!(usr.holding == null))
+					for(i in usr.holding.properties)
+						if(i in src.destroy)
+							hurtme(1)
+
 				clicked()
 
 
