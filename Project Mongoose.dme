@@ -38,6 +38,7 @@
 #include "objects\items\items.dm"
 #include "objects\items\wirecutters.dm"
 #include "objects\structures\rebar.dm"
+#include "objects\structures\rubble.dm"
 #include "objects\structures\structures.dm"
 #include "turfs\turfs.dm"
 #include "turfs\floors\floors.dm"

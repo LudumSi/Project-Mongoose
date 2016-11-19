@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1479526226
+LAST_COMPILE_TIME: 1479587742
 DIR: areas mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: mobs\mobs.dmi;objects\structures\structures.dmi;objects\structures\rebar.dm;objects\items\wirecutters.dm;objects\structures\structures.dm;objects\items\items.dm;mobs\mobs.dm;map_2.dmm;objects\items\items.dmi;fonts.dms
-FILE: objects\structures\structures.dmi
+WINDOW: mobs\mobs.dmi;objects\structures\structures.dmi;objects\structures\rebar.dm;objects\items\wirecutters.dm;objects\structures\structures.dm;objects\items\items.dm;mobs\mobs.dm;map_2.dmm;objects\items\items.dmi;fonts.dms;turfs\walls\walls.dmi;turfs\turfs.dm;turfs\floors\floors.dmi;turfs\walls\walls.dm;objects\structures\rubble.dm;mobs\player.dm
+FILE: mobs\player.dm
 */
 // END_INTERNALS

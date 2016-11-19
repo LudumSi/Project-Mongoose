@@ -1,30 +1,31 @@
 "a" = (/turf/walls/concrete,/area)
 "b" = (/turf/floors/wasteland,/area)
-"c" = (/obj/structures/rebar,/turf/floors/wasteland,/area)
-"d" = (/obj/structures/rebar/broken,/turf/floors/wasteland,/area)
-"e" = (/obj/items/ball,/turf/floors/wasteland,/area)
-"f" = (/obj/items/wirecutters,/turf/floors/wasteland,/area)
-"g" = (/turf/floors/spawn,/area)
+"c" = (/obj/structures/rubble,/turf/floors/wasteland,/area)
+"d" = (/obj/structures/rebar,/turf/floors/wasteland,/area)
+"e" = (/obj/structures/rebar/broken,/turf/floors/wasteland,/area)
+"f" = (/obj/items/ball,/turf/floors/wasteland,/area)
+"g" = (/obj/items/wirecutters,/turf/floors/wasteland,/area)
+"h" = (/turf/floors/spawn,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaa
 abbbbaabbaabbaabbbba
-abbbbaabbaabbaabbbba
-abbbbbaccaacdabbbbba
+abcbbaabbaabbaabbbba
+abbcbbaddaadeacbbbba
 abbbbbbbbbbbbbbbbbba
-aaabbbbbbbbbbbbbbaaa
+aaabbcbbbbccbbbbbaaa
+aaaabbbbbbbcbbbbaaaa
+abbdbbcbbfbbcbbbdbba
+abbdbbbbbbbgbbbbdbba
+aaaabbbbbbhbbbbbaaaa
 aaaabbbbbbbbbbbbaaaa
-abbcbbbbbebbbbbbcbba
-abbcbbbbbbbfbbbbcbba
-aaaabbbbbbgbbbbbaaaa
+abbdbbbbbbbbbbbbdbba
+abbdbbcbbbbbbbcbdbba
 aaaabbbbbbbbbbbbaaaa
-abbcbbbbbbbbbbbbcbba
-abbcbbbbbbbbbbbbcbba
-aaaabbbbbbbbbbbbaaaa
-aaabbbbbbbbbbbbbbaaa
-abbbbbbbbbbbbbbbbbba
-abbbbbaccaadcabbbbba
-abbbbaabbaabbaabbbba
+aaabccbbbbbbbbbbbaaa
+abbbbcbbbbbbbbbbbbba
+acbbbbaddaaedabbcbca
+abcbbaabbaabbaabbcba
 abbbbaabbaabbaabbbba
 aaaaaaaaaaaaaaaaaaaa
 "}
