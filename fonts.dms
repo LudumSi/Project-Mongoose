@@ -2,4 +2,5 @@
 .combat { color:red }
 .harm { font-weight: bold ; color: red }
 .examine { color:blue }
+.warning { color:purple }
 </style>

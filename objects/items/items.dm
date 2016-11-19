@@ -34,10 +34,11 @@ obj/items
 
 	Click()
 		usr.dir = get_dir(usr,src)
-		if(usr.holding == null)
-			pickup()
-		else
-			clicked()
+		if(get_dist(usr,src) <= 1)
+			if(usr.holding == null)
+				pickup()
+			else
+				clicked()
 
 
 
