@@ -14,4 +14,5 @@ mob
 
 	Click()
 		usr.dir = get_dir(usr,src)
-		clicked()
+		if(get_dist(usr,src) <= 1)
+			clicked()

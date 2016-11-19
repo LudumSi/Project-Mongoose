@@ -14,6 +14,9 @@
 
 		loc = locate(/turf/floors/spawn)
 
+	examined()
+		usr << "<SPAN CLASS=examine> A [usr.holding] is in /his hand </SPAN>"
+
 
 	verb
 		say(msg as text)

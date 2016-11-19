@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1479526226
+LAST_COMPILE_TIME: 1479589191
 DIR: areas mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: mobs\mobs.dmi;objects\structures\structures.dmi;objects\structures\rebar.dm;objects\items\wirecutters.dm;objects\structures\structures.dm;objects\items\items.dm;mobs\mobs.dm;map_2.dmm;objects\items\items.dmi;fonts.dms
-FILE: objects\structures\structures.dmi
+WINDOW: objects\structures\rebar.dm;map_2.dmm;objects\items\items.dm;objects\structures\structures.dm;mobs\mobs.dm;fonts.dms;mobs\player.dm;Project Mongoose.dme;turfs\turfs.dm;objects\items\wirecutters.dm;objects\items\ball.dm;turfs\walls\concrete.dm;atom.dm;objects\structures\rubble.dm
+FILE: objects\structures\rebar.dm
 */
 // END_INTERNALS
