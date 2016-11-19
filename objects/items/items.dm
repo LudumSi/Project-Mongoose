@@ -3,6 +3,8 @@ obj/items
 	icon = 'items.dmi'
 	density = 0
 
+	var/list/properties
+
 	verb/pickup()
 		set src in range(1)
 		if(usr.holding == null)
@@ -31,6 +33,7 @@ obj/items
 			src.loc = usr.loc
 
 	Click()
+		usr.dir = get_dir(usr,src)
 		if(usr.holding == null)
 			pickup()
 		else
