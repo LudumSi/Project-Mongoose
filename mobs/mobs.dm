@@ -9,3 +9,9 @@ mob
 	var/hand = null
 	var/hand2 = null
 	var/actvhand = 1
+
+	proc/clicked()
+
+	Click()
+		usr.dir = get_dir(usr,src)
+		clicked()

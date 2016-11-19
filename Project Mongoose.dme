@@ -23,7 +23,6 @@
 
 // BEGIN_INCLUDE
 #include "atom.dm"
-#include "client.dm"
 #include "defaults.dm"
 #include "map_2.dmm"
 #include "fonts.dms"

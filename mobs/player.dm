@@ -7,7 +7,7 @@
 
 	Login()
 		name = input("What is your name?") as text
-		icon += input("Color?") as color
+		color = input("What color") as color
 		src.client.screen += new/obj/buttons/holding
 		src.client.screen += new/obj/buttons/second
 		src.client.screen += new/obj/buttons/drop
