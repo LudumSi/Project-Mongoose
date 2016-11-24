@@ -34,6 +34,7 @@
 #include "objects\buttons\buttons.dm"
 #include "objects\buttons\clothes.dm"
 #include "objects\buttons\drop.dm"
+#include "objects\buttons\hat.dm"
 #include "objects\buttons\holding.dm"
 #include "objects\buttons\second.dm"
 #include "objects\items\ball.dm"

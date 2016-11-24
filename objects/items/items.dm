@@ -38,7 +38,10 @@ obj/items
 		drop()
 		if(slot == 1)
 			usr.clothes = src
-			screen_loc = "7,1"
+			screen_loc = "6,1"
+		if(slot == 2)
+			usr.hat = src
+			screen_loc = "5,1"
 		src.loc = usr
 		usr.client.screen += src
 		usr.overlayset()

@@ -1,7 +1,7 @@
 obj/buttons/clothes
 
 	icon_state = "buttonbase"
-	screen_loc = "7,1"
+	screen_loc = "6,1"
 
 	Click()
 		var/obj/items/I = usr.holding
