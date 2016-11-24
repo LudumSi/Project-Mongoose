@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1479589191
-DIR: areas mobs objects objects\buttons objects\items objects\structures turfs turfs\floors turfs\walls 
+LAST_COMPILE_TIME: 1480023568
+DIR: areas mobs objects objects\buttons objects\items objects\items\equiptment objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 510.1347
-WINDOW: objects\structures\rebar.dm;map_2.dmm;objects\items\items.dm;objects\structures\structures.dm;mobs\mobs.dm;fonts.dms;mobs\player.dm;Project Mongoose.dme;turfs\turfs.dm;objects\items\wirecutters.dm;objects\items\ball.dm;turfs\walls\concrete.dm;atom.dm;objects\structures\rubble.dm
-FILE: objects\structures\rebar.dm
+LAST_COMPILE_VERSION: 511.1363
+WINDOW: objects\structures\rebar.dm;map_2.dmm;objects\structures\structures.dm;mobs\player.dm;Project Mongoose.dme;turfs\turfs.dm;objects\items\wirecutters.dm;objects\items\ball.dm;turfs\walls\concrete.dm;atom.dm;objects\buttons\buttons.dm;objects\buttons\clothes.dm;mobs\mobs.dm;objects\buttons\holding.dm;objects\objects.dm;objects\items\items.dm;objects\items\equiptment\equipment.dmi;objects\items\equiptment\equipment.dm;objects\items\equiptment\uniform.dm;mobs\mobs.dmi
+FILE: objects\items\items.dm
 */
 // END_INTERNALS

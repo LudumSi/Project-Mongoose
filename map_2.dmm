@@ -5,7 +5,8 @@
 "e" = (/obj/structures/rebar/broken,/turf/floors/wasteland,/area)
 "f" = (/obj/items/ball,/turf/floors/wasteland,/area)
 "g" = (/obj/items/wirecutters,/turf/floors/wasteland,/area)
-"h" = (/turf/floors/spawn,/area)
+"h" = (/obj/items/equipment/uniform,/turf/floors/wasteland,/area)
+"i" = (/turf/floors/spawn,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaa
@@ -17,7 +18,7 @@ aaabbcbbbbccbbbbbaaa
 aaaabbbbbbbcbbbbaaaa
 abbdbbcbbfbbcbbbdbba
 abbdbbbbbbbgbbbbdbba
-aaaabbbbbbhbbbbbaaaa
+aaaabbbhbbibbbbbaaaa
 aaaabbbbbbbbbbbbaaaa
 abbdbbbbbbbbbbbbdbba
 abbdbbcbbbbbbbcbdbba

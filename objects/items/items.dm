@@ -4,6 +4,8 @@ obj/items
 	density = 0
 
 	var/list/properties
+	var/list/slots
+	var/equip_state = null
 
 	verb/pickup()
 		set src in range(1)
@@ -25,12 +27,29 @@ obj/items
 	proc/drop()
 		if(usr.holding == src)
 			usr.holding = null
-			if(usr.hand == src)
-				usr.hand = null
-			else if(usr.hand2 == src)
-				usr.hand2 = null
-			usr.client.screen -= src
-			src.loc = usr.loc
+		if(usr.hand == src)
+			usr.hand = null
+		if(usr.hand2 == src)
+			usr.hand2 = null
+		usr.client.screen -= src
+		src.loc = usr.loc
+
+	proc/equip(slot)
+		drop()
+		if(slot == 1)
+			usr.clothes = src
+			screen_loc = "7,1"
+		src.loc = usr
+		usr.client.screen += src
+		usr.overlayset()
+
+	proc/unequip()
+		if(usr.clothes == src)
+			usr.clothes = null
+		usr.client.screen -= src
+		usr.overlayset()
+		src.loc = usr.loc
+		pickup()
 
 	Click()
 		usr.dir = get_dir(usr,src)
@@ -39,6 +58,8 @@ obj/items
 				pickup()
 			else
 				clicked()
+
+
 
 
 
