@@ -7,12 +7,18 @@
 
 	Login()
 		name = input("What is your name?") as text
-		color = input("What color") as color
+
+		skin = new(usr.icon)
+		skin.color = input("What color") as color
+
 		src.client.screen += new/obj/buttons/holding
 		src.client.screen += new/obj/buttons/second
 		src.client.screen += new/obj/buttons/drop
+		src.client.screen += new/obj/buttons/clothes
 
 		loc = locate(/turf/floors/spawn)
+
+		overlayset()
 
 	examined()
 		usr << "<SPAN CLASS=examine> A [usr.holding] is in /his hand </SPAN>"
