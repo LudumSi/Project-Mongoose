@@ -7,16 +7,6 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
-#define FILE_DIR "areas"
-#define FILE_DIR "mobs"
-#define FILE_DIR "objects"
-#define FILE_DIR "objects/buttons"
-#define FILE_DIR "objects/items"
-#define FILE_DIR "objects/items/equiptment"
-#define FILE_DIR "objects/structures"
-#define FILE_DIR "turfs"
-#define FILE_DIR "turfs/floors"
-#define FILE_DIR "turfs/walls"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
