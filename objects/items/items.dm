@@ -54,13 +54,20 @@ obj/items
 		src.loc = usr.loc
 		pickup()
 
+	proc/inv_clicked()
+
 	Click()
 		usr.dir = get_dir(usr,src)
 		if(get_dist(usr,src) <= 1)
 			if(usr.holding == null)
 				pickup()
+			else if(usr.holding == src)
+				inv_clicked()
 			else
 				clicked()
+
+	destroyme()
+		del src
 
 
 
