@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1480023894
+LAST_COMPILE_TIME: 1480653549
 DIR: areas mobs objects objects\buttons objects\items objects\items\equiptment objects\structures turfs turfs\floors turfs\walls 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 511.1363
-WINDOW: objects\structures\rebar.dm;map_2.dmm;objects\structures\structures.dm;mobs\player.dm;turfs\turfs.dm;objects\items\wirecutters.dm;objects\items\ball.dm;turfs\walls\concrete.dm;atom.dm;objects\buttons\buttons.dm;objects\items\items.dm;objects\buttons\clothes.dm;objects\buttons\hat.dm
-FILE: objects\buttons\hat.dm
+WINDOW: objects\structures\rebar.dm;map_2.dmm;objects\items\items.dm;objects\buttons\hat.dm;objects\items\stacks.dm;atom.dm;objects\items\wirecutters.dm;objects\items\rods.dm;objects\items\items.dmi;objects\items\equiptment\uniform.dm;objects\items\equiptment\equipment.dmi
+FILE: objects\items\stacks.dm
 */
 // END_INTERNALS
