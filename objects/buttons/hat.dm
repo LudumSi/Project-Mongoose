@@ -1,4 +1,4 @@
-obj/buttons/har
+obj/buttons/hat
 
 	icon_state = "buttonbase"
 	screen_loc = "5,1"
