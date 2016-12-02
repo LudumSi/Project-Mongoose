@@ -39,6 +39,8 @@
 #include "objects\buttons\second.dm"
 #include "objects\items\ball.dm"
 #include "objects\items\items.dm"
+#include "objects\items\rods.dm"
+#include "objects\items\stacks.dm"
 #include "objects\items\wirecutters.dm"
 #include "objects\items\equiptment\equipment.dm"
 #include "objects\items\equiptment\uniform.dm"
