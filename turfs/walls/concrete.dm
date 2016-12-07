@@ -4,12 +4,13 @@ turf/walls/concrete
 	desc = "A block of solid concrete"
 	icon_state = "concrete"
 
-	destroy = ("hammer")
 	HP = 20
 	maxHP = 20
 
+	destroy = list("hammer")
+
 	destroyme()
-		new/obj/structures/rebar(src.loc)
-		new/obj/structures/rubble(src.loc)
-		new/turf/floors/wasteland(src.loc)
-		del src
+		new/obj/structures/rebar(src)
+		new/obj/structures/rubble(usr.loc)
+		new/turf/walls/concrete/cracked(src)
+

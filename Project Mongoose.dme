@@ -28,6 +28,7 @@
 #include "objects\buttons\holding.dm"
 #include "objects\buttons\second.dm"
 #include "objects\items\ball.dm"
+#include "objects\items\hammer.dm"
 #include "objects\items\items.dm"
 #include "objects\items\rods.dm"
 #include "objects\items\stacks.dm"
@@ -42,6 +43,7 @@
 #include "turfs\floors\spawn.dm"
 #include "turfs\floors\wasteland.dm"
 #include "turfs\walls\concrete.dm"
+#include "turfs\walls\cracked_concrete.dm"
 #include "turfs\walls\walls.dm"
 // END_INCLUDE
 
