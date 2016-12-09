@@ -5,6 +5,7 @@ turf
 	proc/clicked()
 
 	Click()
+		..()
 		if(get_dist(usr,src) <= 1)
 			if(!(usr.holding == null))
 				var/i

@@ -10,7 +10,6 @@ turf/walls/concrete
 	destroy = list("hammer")
 
 	destroyme()
-		new/obj/structures/rebar(src)
-		new/obj/structures/rubble(usr.loc)
-		new/turf/walls/concrete/cracked(src)
+		new/obj/structures/rubble(src)
+		new/turf/floors/wasteland(src)
 

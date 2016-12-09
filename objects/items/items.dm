@@ -6,6 +6,7 @@ obj/items
 	var/list/properties
 	var/list/slots
 	var/equip_state = null
+	var/flying = 0
 
 	verb/pickup()
 		set src in range(1)
@@ -57,7 +58,7 @@ obj/items
 	proc/inv_clicked()
 
 	Click()
-		usr.dir = get_dir(usr,src)
+		..()
 		if(get_dist(usr,src) <= 1)
 			if(usr.holding == null)
 				pickup()

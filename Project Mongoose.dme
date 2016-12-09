@@ -34,6 +34,7 @@
 #include "objects\items\stacks.dm"
 #include "objects\items\wirecutters.dm"
 #include "objects\items\equiptment\equipment.dm"
+#include "objects\items\equiptment\peasant.dm"
 #include "objects\items\equiptment\uniform.dm"
 #include "objects\structures\rebar.dm"
 #include "objects\structures\rubble.dm"
@@ -43,7 +44,6 @@
 #include "turfs\floors\spawn.dm"
 #include "turfs\floors\wasteland.dm"
 #include "turfs\walls\concrete.dm"
-#include "turfs\walls\cracked_concrete.dm"
 #include "turfs\walls\walls.dm"
 // END_INCLUDE
 

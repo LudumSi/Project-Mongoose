@@ -12,6 +12,7 @@ mob
 	var/hand2 = null
 	var/actvhand = 1
 	var/image/skin = null
+	var/throwing = 0
 
 	proc/clicked()
 	proc/overlayset()
@@ -24,6 +25,6 @@ mob
 		usr.overlays = L
 
 	Click()
-		usr.dir = get_dir(usr,src)
+		..()
 		if(get_dist(usr,src) <= 1)
 			clicked()

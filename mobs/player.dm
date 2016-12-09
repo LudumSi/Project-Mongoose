@@ -16,6 +16,8 @@
 		src.client.screen += new/obj/buttons/drop
 		src.client.screen += new/obj/buttons/clothes
 		src.client.screen += new/obj/buttons/hat
+		var/obj/items/equipment/peasant/P = new(src.loc)
+		P.equip(1)
 
 		loc = locate(/turf/floors/spawn)
 
