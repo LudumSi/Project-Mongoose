@@ -13,6 +13,7 @@ obj/structures
 					if(i in src.destroy)
 						hurtme(1)
 					else clicked()
+			else clicked()
 
 	examined()
 		if(HP == maxHP)

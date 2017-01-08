@@ -12,7 +12,8 @@ obj/buttons/clothes
 					I.equip(1)
 		else
 			if(!(C == null))
-				C.unequip()
+				C.unequip(1)
+
 
 
 

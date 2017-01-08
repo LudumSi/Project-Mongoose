@@ -3,27 +3,29 @@ obj/items
 	icon = 'items.dmi'
 	density = 0
 
+	var/pickup = 1
 	var/list/properties
 	var/list/slots
 	var/equip_state = null
-	var/flying = 0
+	var/equiped = 0
 
 	verb/pickup()
 		set src in range(1)
-		if(usr.holding == null)
-			usr.holding = src
-			if(usr.actvhand == 1)
-				usr.hand = src
-				if(usr.hand2 == src)
-					usr.hand2 = null
-				screen_loc = "9,1"
-			else if(usr.actvhand == 2)
-				usr.hand2 = src
-				if(usr.hand == src)
-					usr.hand = null
-				screen_loc = "8,1"
-			src.loc = usr
-			usr.client.screen += src
+		if(pickup == 1)
+			if(usr.holding == null)
+				usr.holding = src
+				if(usr.actvhand == 1)
+					usr.hand = src
+					if(usr.hand2 == src)
+						usr.hand2 = null
+					screen_loc = "9,1"
+				else if(usr.actvhand == 2)
+					usr.hand2 = src
+					if(usr.hand == src)
+						usr.hand = null
+					screen_loc = "8,1"
+				src.loc = usr
+				usr.client.screen += src
 
 	proc/drop()
 		if(usr.holding == src)
@@ -46,14 +48,19 @@ obj/items
 		src.loc = usr
 		usr.client.screen += src
 		usr.overlayset()
+		pickup = 0
 
-	proc/unequip()
-		if(usr.clothes == src)
+	proc/unequip(slot)
+		if(slot == 1)
 			usr.clothes = null
+		if(slot == 2)
+			usr.hat = null
 		usr.client.screen -= src
 		usr.overlayset()
+		pickup = 1
 		src.loc = usr.loc
 		pickup()
+
 
 	proc/inv_clicked()
 

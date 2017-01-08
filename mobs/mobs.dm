@@ -16,11 +16,11 @@ mob
 	proc/clicked()
 	proc/overlayset()
 		var/L[2]
-		if(clothes)
-			L += clothes
+		if(!(src.clothes == null))
+			L += clothes.icon
 		if(hat)
-			L += hat
-		usr.overlays = L
+			L += hat.icon
+		overlays = L
 
 	Click()
 		..()
