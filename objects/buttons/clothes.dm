@@ -15,3 +15,4 @@ obj/buttons/clothes
 				C.unequip()
 
 
+
