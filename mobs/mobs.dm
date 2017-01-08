@@ -11,19 +11,18 @@ mob
 	var/hand = null
 	var/hand2 = null
 	var/actvhand = 1
-	var/image/skin = null
+	var/throwing = 0
 
 	proc/clicked()
 	proc/overlayset()
-		var/L[3]
-		L += skin
+		var/L[2]
 		if(clothes)
-			L += image(usr.clothes.icon, icon_state = usr.clothes.equip_state)
+			L += image(clothes.icon,icon_state = clothes.icon_state)
 		if(hat)
-			L += image(usr.clothes.icon, icon_state = usr.clothes.equip_state)
-		usr.overlays = L
+			L += image(hat.icon,icon_state = clothes.icon_state)
+		overlays = L
 
 	Click()
-		usr.dir = get_dir(usr,src)
+		..()
 		if(get_dist(usr,src) <= 1)
 			clicked()

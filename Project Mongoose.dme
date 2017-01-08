@@ -7,16 +7,6 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
-#define FILE_DIR "areas"
-#define FILE_DIR "mobs"
-#define FILE_DIR "objects"
-#define FILE_DIR "objects/buttons"
-#define FILE_DIR "objects/items"
-#define FILE_DIR "objects/items/equiptment"
-#define FILE_DIR "objects/structures"
-#define FILE_DIR "turfs"
-#define FILE_DIR "turfs/floors"
-#define FILE_DIR "turfs/walls"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -28,6 +18,7 @@
 #include "map_2.dmm"
 #include "fonts.dms"
 #include "areas\areas.dm"
+#include "datum\materials\materials.dm"
 #include "mobs\mobs.dm"
 #include "mobs\player.dm"
 #include "objects\objects.dm"
@@ -38,11 +29,13 @@
 #include "objects\buttons\holding.dm"
 #include "objects\buttons\second.dm"
 #include "objects\items\ball.dm"
+#include "objects\items\hammer.dm"
 #include "objects\items\items.dm"
 #include "objects\items\rods.dm"
 #include "objects\items\stacks.dm"
 #include "objects\items\wirecutters.dm"
 #include "objects\items\equiptment\equipment.dm"
+#include "objects\items\equiptment\peasant.dm"
 #include "objects\items\equiptment\uniform.dm"
 #include "objects\structures\rebar.dm"
 #include "objects\structures\rubble.dm"
