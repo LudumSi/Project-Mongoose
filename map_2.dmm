@@ -9,6 +9,11 @@
 "i" = (/obj/items/wirecutters,/turf/floors/wasteland,/area)
 "j" = (/obj/items/equipment/uniform,/turf/floors/wasteland,/area)
 "k" = (/turf/floors/spawn,/area)
+"l" = (/obj/items/spraypaint,/turf/floors/wasteland,/area)
+"m" = (/obj/items/writing/pen,/turf/floors/wasteland,/area)
+"n" = (/obj/items/paper,/turf/floors/wasteland,/area)
+"o" = (/obj/items/writing/pen/red,/turf/floors/wasteland,/area)
+"p" = (/turf/walls/concrete{msg = "a pinup of Red Lantern"},/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaa
@@ -21,13 +26,13 @@ aaaabbbfbbbcbggbaaaa
 abbdbbcbbhbbcbbbdbba
 abbdbbbbbbbibbbbdbba
 aaaabbbjbbkbbbbbaaaa
-aaaabbbbbbbbbbbbaaaa
+aaaabblbmnobbbbbaaaa
 abbdbbbbbbbbbbbbdbba
 abbdbbcbbbbbbbcbdbba
 aaaabbbbbbbbbbbbaaaa
 aaabccbbbbbbbbbbbaaa
 abbbbcbbbbbbbbbbbbba
-acbbbbaddaaedabbcbca
+acbbbbaddpaedabbcbca
 abcbbaabbaabbaabbcba
 abbbbaabbaabbaabbbba
 aaaaaaaaaaaaaaaaaaaa
