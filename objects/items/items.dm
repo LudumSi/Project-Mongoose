@@ -8,6 +8,14 @@ obj/items
 	var/list/slots
 	var/equip_state = null
 	var/equiped = 0
+	var/size = 3
+	/*
+	1= tiny
+	2= small
+	3 = medium
+	4 = large
+	5 = huge
+	*/
 
 	verb/pickup()
 		set src in range(1)

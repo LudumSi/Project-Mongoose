@@ -12,7 +12,7 @@ obj/structures
 				for(i in usr.holding.properties)
 					if(i in src.destroy)
 						hurtme(1)
-					else clicked()
+				clicked()
 			else clicked()
 
 	examined()
