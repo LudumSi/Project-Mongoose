@@ -7,10 +7,10 @@ turf
 	Click()
 		..()
 		if(get_dist(usr,src) <= 1)
+			var/i
 			if(!(usr.holding == null))
-				var/i
 				for(i in usr.holding.properties)
 					if(i in src.destroy)
 						hurtme(1)
-					else
-						clicked()
+				clicked()
+			else clicked()
