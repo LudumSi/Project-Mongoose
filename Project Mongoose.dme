@@ -15,7 +15,7 @@
 // BEGIN_INCLUDE
 #include "atom.dm"
 #include "defaults.dm"
-#include "map_2.dmm"
+#include "map_3.dmm"
 #include "fonts.dms"
 #include "areas\areas.dm"
 #include "datum\materials\materials.dm"
@@ -48,6 +48,7 @@
 #include "turfs\floors\floors.dm"
 #include "turfs\floors\spawn.dm"
 #include "turfs\floors\wasteland.dm"
+#include "turfs\walls\barrier.dm"
 #include "turfs\walls\concrete.dm"
 #include "turfs\walls\walls.dm"
 // END_INCLUDE

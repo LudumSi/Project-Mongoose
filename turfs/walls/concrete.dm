@@ -1,7 +1,7 @@
 turf/walls/concrete
 
 	name = "Concrete wall"
-	desc = "A block of solid concrete"
+	desc = "A block of solid concrete, formed by ancient hands"
 	icon_state = "concrete"
 
 	HP = 20

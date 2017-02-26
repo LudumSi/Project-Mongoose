@@ -18,12 +18,19 @@ turf/walls
 				for(i in usr.holding.properties)
 					if(i in src.destroy)
 						hurtme(1)
+			else
 				clicked()
-			else clicked()
 
 	clicked()
 		if(istype(usr.holding,/obj/items/spraypaint))
+			var/obj/items/spraypaint/H = usr.holding
 			msg = input("What do you spraypaint on the wall?") as text
+			overlays = null
+			var/image/G = image('datum/effects.dmi',src)
+			G.icon_state = "graffiti"
+			G.color = H.hue
+			G.pixel_y = rand(-3,3)
+			src.overlays += G
 
 	examined()
 		if(!(msg == null))

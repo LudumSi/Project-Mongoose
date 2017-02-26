@@ -1,6 +1,7 @@
 /obj/items/writing
 
 	var/style = "base"
+	var/hue = rgb(0,0,0)
 	//NOTE: Style system does not work, will need to do html instead
 
 /obj/items/writing/pen
@@ -9,7 +10,3 @@
 	name = "Pen"
 	desc = "A ballpoint pen, for writing"
 
-/obj/items/writing/pen/red
-
-	icon_state = "pen_r"
-	style = "combat"
