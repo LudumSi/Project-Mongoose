@@ -15,7 +15,7 @@
 // BEGIN_INCLUDE
 #include "atom.dm"
 #include "defaults.dm"
-#include "map_2.dmm"
+#include "map_3.dmm"
 #include "fonts.dms"
 #include "areas\areas.dm"
 #include "datum\materials\materials.dm"
