@@ -48,6 +48,7 @@
 #include "turfs\floors\floors.dm"
 #include "turfs\floors\spawn.dm"
 #include "turfs\floors\wasteland.dm"
+#include "turfs\walls\barrier.dm"
 #include "turfs\walls\concrete.dm"
 #include "turfs\walls\walls.dm"
 // END_INCLUDE
