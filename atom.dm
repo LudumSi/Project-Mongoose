@@ -5,7 +5,7 @@ atom
 
 	verb/examine()
 		set src in view()
-		usr << "<SPAN class=examine>You examine the [src.name]...<SPAN>"
+		usr << "<SPAN class=bold>You examine \the [src.name]...<SPAN>"
 		usr << "<SPAN class=examine>[src.desc]<SPAN>"
 		examined()
 
