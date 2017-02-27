@@ -1,6 +1,6 @@
 obj/items/hammer
 
-	name = "Hammer"
+	name = "hammer"
 	desc = "Stop! Hammertime!"
 	icon_state = "hammer"
 

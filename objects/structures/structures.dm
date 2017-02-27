@@ -12,8 +12,10 @@ obj/structures
 				for(i in usr.holding.properties)
 					if(i in src.destroy)
 						hurtme(1)
+						return
 				clicked()
-			else clicked()
+			else
+				clicked()
 
 	examined()
 		if(HP == maxHP)

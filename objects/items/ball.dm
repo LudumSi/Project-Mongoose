@@ -1,6 +1,6 @@
 obj/items/ball
 
-	name = "Rubber ball"
+	name = "rubber ball"
 	desc = "It doesn't do much..."
 
 	icon_state = "ball"
