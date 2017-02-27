@@ -94,7 +94,7 @@ obj/items/stacks
 			else
 				stack_push(H,src.stack)
 
-	inv_clicked()
+	shift_inv_clicked()
 		var/N = input("How many do you want to take (1 to [stack])?") as num
 		src.drop()
 		src.stack_split(N)

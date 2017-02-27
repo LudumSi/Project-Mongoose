@@ -70,15 +70,20 @@ obj/items
 		pickup()
 
 
+	proc/shift_inv_clicked()
 	proc/inv_clicked()
 
-	Click()
+	Click(location,control,params)
+		params=params2list(params)
 		..()
 		if(get_dist(usr,src) <= 1)
 			if(usr.holding == null)
 				pickup()
 			else if(usr.holding == src)
-				inv_clicked()
+				if("shift" in params)
+					shift_inv_clicked()
+				else
+					inv_clicked()
 			else
 				clicked()
 

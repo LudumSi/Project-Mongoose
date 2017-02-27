@@ -1,7 +1,7 @@
 /obj/items/paper
 
 	icon_state = "paper"
-	name = "Paper"
+	name = "paper"
 	desc = "A simple piece of paper"
 
 	var/message

@@ -1,6 +1,6 @@
 obj/items/wirecutters
 
-	name = "Wirecutters"
+	name = "wirecutters"
 	desc = "These handy lil' guys cut anything from wires to rods"
 	icon_state = "wirecutters"
 

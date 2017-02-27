@@ -22,9 +22,9 @@
 
 	examined()
 		if(!(src.holding == null))
-			usr << "<SPAN CLASS=examine> A [src.holding] is in their hand </SPAN>"
+			usr << "<SPAN CLASS=examine> \icon[src.holding] A [src.holding] is in their hand </SPAN>"
 		if(!(src.clothes == null))
-			usr << "<SPAN CLASS=examine> They are wearing [src.clothes] </SPAN>"
+			usr << "<SPAN CLASS=examine> \icon[src.clothes] They are wearing [src.clothes] </SPAN>"
 
 	verb/say(msg as text)
 		view() << "[src.name] says \"[msg]\" "

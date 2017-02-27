@@ -23,7 +23,8 @@ atom
 		if(HP >> maxHP)
 			HP = maxHP
 
-	Click()
+	Click(location,control,params)
+		params=params2list(params)
 		usr.dir = get_dir(usr,src)
 
 

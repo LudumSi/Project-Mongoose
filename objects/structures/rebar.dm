@@ -1,6 +1,6 @@
 obj/structures/rebar
 
-	name = "Rebar"
+	name = "rebar"
 	desc = "A grille made of rusted metal rods"
 
 	icon_state = "rebar"

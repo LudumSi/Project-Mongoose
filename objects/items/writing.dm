@@ -7,6 +7,6 @@
 /obj/items/writing/pen
 
 	icon_state = "pen"
-	name = "Pen"
+	name = "pen"
 	desc = "A ballpoint pen, for writing"
 
