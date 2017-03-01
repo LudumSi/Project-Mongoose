@@ -95,6 +95,9 @@ obj/items
 	proc/thrown(atom/target)
 		drop()
 
+		for(var/obj/buttons/throwing/T in usr.client.screen)
+			T.icon_state = "rev_halfbutton"
+
 		var oldDense = density
 		var oldDist = get_dist(src,target)+1
 
