@@ -5,3 +5,6 @@ obj/items/ball
 
 	icon_state = "ball"
 	size = 2
+
+	inv_clicked()
+		usr.throwing = 1

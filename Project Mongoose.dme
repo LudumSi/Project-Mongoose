@@ -28,6 +28,7 @@
 #include "objects\buttons\hat.dm"
 #include "objects\buttons\holding.dm"
 #include "objects\buttons\second.dm"
+#include "objects\buttons\throw.dm"
 #include "objects\items\ball.dm"
 #include "objects\items\bricks.dm"
 #include "objects\items\hammer.dm"

@@ -13,6 +13,7 @@
 		src.client.screen += new/obj/buttons/drop
 		src.client.screen += new/obj/buttons/clothes
 		//src.client.screen += new/obj/buttons/hat
+		src.client.screen += new/obj/buttons/throwing
 		var/obj/items/equipment/peasant/P = new(src.loc)
 		P.equip(1)
 
