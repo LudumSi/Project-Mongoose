@@ -26,5 +26,12 @@ atom
 	Click(location,control,params)
 		params=params2list(params)
 		usr.dir = get_dir(usr,src)
+		if(usr.throwing == 1)
+			if(!(usr.holding == null))
+				var/obj/items/H = usr.holding
+				H.thrown(src)
+				usr.throwing = 0
+
+
 
 

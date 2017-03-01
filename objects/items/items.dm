@@ -9,6 +9,7 @@ obj/items
 	var/equip_state = null
 	var/equiped = 0
 	var/size = 3
+	var throwing = 0
 	/*
 	1= tiny
 	2= small
@@ -89,6 +90,21 @@ obj/items
 
 	destroyme()
 		del src
+
+
+	proc/thrown(atom/target)
+		drop()
+
+		var oldDense = density
+		var oldDist = get_dist(src,target)+1
+
+		while(get_dist(src,target) < oldDist)
+			density = 1
+			step(src,get_dir(src,target),0)
+			oldDist -= 1
+			density = oldDense
+
+
 
 
 

@@ -22,6 +22,7 @@
 #include "mobs\mobs.dm"
 #include "mobs\player.dm"
 #include "objects\objects.dm"
+#include "objects\projectile.dm"
 #include "objects\buttons\buttons.dm"
 #include "objects\buttons\clothes.dm"
 #include "objects\buttons\drop.dm"
