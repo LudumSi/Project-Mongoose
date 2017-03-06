@@ -1,5 +1,5 @@
 "a" = (/turf,/area)
-"b" = (/turf/walls/concrete/barrier,/area)
+"b" = (/turf/walls/barrier,/area)
 "c" = (/turf/walls/concrete,/area)
 "d" = (/turf/floors/wasteland,/area)
 "e" = (/obj/structures/rubble,/turf/floors/wasteland,/area)

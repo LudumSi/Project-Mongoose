@@ -1,4 +1,4 @@
-turf/walls/concrete/barrier
+turf/walls/barrier
 
 	name = "concrete wall"
 	desc = "A block of solid concrete, formed by ancient hands. This one looks particularily tough"
