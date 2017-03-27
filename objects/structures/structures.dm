@@ -3,6 +3,10 @@ obj/structures
 	icon = 'structures.dmi'
 
 	var/list/destroy
+	var/signalop = 0
+	var/keycode
+
+	proc/signaled(keyword)
 
 	Click()
 		..()
