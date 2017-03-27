@@ -26,3 +26,7 @@
 		else
 			usr << "You fail to excavate anything usefull from the rubble"
 		del src
+
+	New()
+		pixel_x = rand(-8,8)
+		pixel_y = rand(-8,8)

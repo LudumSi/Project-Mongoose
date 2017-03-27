@@ -35,3 +35,4 @@ turf/walls
 	examined()
 		if(!(msg == null))
 			usr << "<SPAN class=examine>Someone has spraypainted [msg] onto the wall</SPAN>"
+
