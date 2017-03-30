@@ -47,6 +47,7 @@
 #include "objects\spawners\one_type.dm"
 #include "objects\spawners\spawners.dm"
 #include "objects\structures\bars.dm"
+#include "objects\structures\chair.dm"
 #include "objects\structures\lever.dm"
 #include "objects\structures\rebar.dm"
 #include "objects\structures\rubble.dm"

@@ -1,6 +1,7 @@
 turf
 
 	var/list/destroy
+	var/neighbors[]
 
 	proc/clicked()
 
@@ -14,3 +15,4 @@ turf
 						hurtme(1)
 				clicked()
 			else clicked()
+
