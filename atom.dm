@@ -11,6 +11,27 @@ atom
 
 	proc/examined()
 
+	proc/orthoRotate(direction)
+		if(direction == "cw")
+			if(dir == SOUTH)
+				dir = WEST
+			else if(dir == WEST)
+				dir = NORTH
+			else if(dir == NORTH)
+				dir = EAST
+			else if(dir == EAST)
+				dir = SOUTH
+		else if(direction == "ccw")
+			if(dir == SOUTH)
+				dir = EAST
+			else if(dir == WEST)
+				dir = SOUTH
+			else if(dir == NORTH)
+				dir = WEST
+			else if(dir == EAST)
+				dir = NORTH
+
+
 	proc/destroyme()
 
 	proc/hurtme(dmg)

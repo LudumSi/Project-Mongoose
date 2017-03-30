@@ -5,4 +5,5 @@ turf/walls/barrier
 	icon_state = "wall"
 
 	New()
+		..()
 		icon_state = "concrete"
