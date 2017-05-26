@@ -25,6 +25,7 @@ obj/structures/doors/big
 		dir = NORTH
 
 	New()
+		..()
 		if(preopened == 1)
 			toggle()
 

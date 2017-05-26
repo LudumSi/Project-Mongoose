@@ -1,12 +1,11 @@
 /mob/player
 
-	name = "Unkown"
 	desc = "A human bean"
-
 	icon_state = "player"
 
 	Login()
-		name = input("What is your name?") as text
+
+		gender = input("Select a gender for your character.","Your Gender",gender) in list("male","female","neuter")
 
 		src.client.screen += new/obj/buttons/holding
 		src.client.screen += new/obj/buttons/second
@@ -20,6 +19,14 @@
 		loc = locate(/turf/floors/spawn)
 
 		overlayset()
+
+		var/names/N = new(gender)
+		name = N.name
+
+
+
+
+
 
 	examined()
 		if(!(src.holding == null))

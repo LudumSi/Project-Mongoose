@@ -7,6 +7,7 @@
 	var/hue = rgb(255,0,0)
 
 	New()
+		..()
 		var/image/M = image('items.dmi',src)
 		M.icon_state = "spraypaint_mask"
 		M.color = src.hue

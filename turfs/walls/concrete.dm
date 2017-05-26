@@ -4,8 +4,7 @@ turf/walls/concrete
 	desc = "A block of solid concrete, formed by ancient hands"
 	icon_state = "concrete"
 
-	HP = 20
-	maxHP = 20
+	startHP = 20
 
 	destroy = list("hammer")
 

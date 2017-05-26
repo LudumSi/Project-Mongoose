@@ -5,6 +5,7 @@ obj/structures/plants/grass
 	icon_state = "grass"
 
 	New()
+		..()
 		pixel_x = rand(-16,16)
 		pixel_y = rand(-16,16)
 		var flip = rand(0,1)

@@ -6,8 +6,7 @@ obj/structures/rebar
 	icon_state = "rebar"
 	layer = 3.1
 
-	HP = 2
-	maxHP = 2
+	startHP = 2
 
 	destroy = list("cutting")
 
