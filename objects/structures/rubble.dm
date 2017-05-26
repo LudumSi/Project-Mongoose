@@ -11,8 +11,9 @@
 	HP = 1
 
 	clicked()
-		usr.x = x
-		usr.y = y
+		src.density = 0
+		step(usr,get_dir(usr,src))
+		src.density = 1
 		sleep(2)
 
 	destroy = list("dig")
@@ -26,7 +27,3 @@
 		else
 			usr << "You fail to excavate anything usefull from the rubble"
 		del src
-
-	New()
-		pixel_x = rand(-8,8)
-		pixel_y = rand(-8,8)

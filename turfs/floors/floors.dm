@@ -31,4 +31,5 @@ turf/floors
 				scanX++
 
 	New()
+		..()
 		edges()

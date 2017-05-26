@@ -1,4 +1,4 @@
-datum/materials
+materials
 
 	var/flamable
 	var/durability

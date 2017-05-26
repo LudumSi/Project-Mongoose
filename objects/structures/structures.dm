@@ -22,10 +22,10 @@ obj/structures
 				clicked()
 
 	examined()
-		if(HP == maxHP)
+		if(HP.value == HP.max_value)
 			usr << "<SPAN CLASS=examine> It looks undamaged </SPAN>"
-		else if(HP << maxHP)
-			if(HP >= (maxHP/2))
+		else if(HP.value << HP.max_value)
+			if(HP.value >= (HP.max_value/2))
 				usr << "<SPAN CLASS=examine> It looks slightly beat-up </SPAN>"
-			if(HP << (maxHP/2))
+			if(HP.value << (HP.max_value/2))
 				usr << "<SPAN CLASS=warning> It looks quite damaged </SPAN>"

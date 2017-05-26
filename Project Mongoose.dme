@@ -18,6 +18,8 @@
 #include "map_3.dmm"
 #include "fonts.dms"
 #include "areas\areas.dm"
+#include "datum\names.dm"
+#include "datum\stats.dm"
 #include "datum\materials\materials.dm"
 #include "mobs\mobs.dm"
 #include "mobs\player.dm"

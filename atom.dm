@@ -1,7 +1,10 @@
 atom
 
-	var/HP = 10
-	var/maxHP = 10
+	var/startHP
+	var/stat/HP
+
+	New()
+		HP = new(startHP)
 
 	verb/examine()
 		set src in view()
@@ -35,14 +38,12 @@ atom
 	proc/destroyme()
 
 	proc/hurtme(dmg)
-		HP -= dmg
-		if(HP <= 0)
+		HP.value -= dmg
+		if(HP.value <= 0)
 			destroyme()
 
 	proc/healme(amt)
-		HP += amt
-		if(HP >> maxHP)
-			HP = maxHP
+		HP.Add(amt)
 
 	Click(location,control,params)
 		params=params2list(params)

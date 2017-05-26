@@ -12,6 +12,7 @@ obj/structures/table
 			I.loc = src.loc
 
 	New()
+		..()
 		var/turf/T = src.loc
 		var/turf/B = locate(T.x,T.y-1,T.z)
 		for(var/I in B.contents)
