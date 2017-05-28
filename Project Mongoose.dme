@@ -14,10 +14,12 @@
 
 // BEGIN_INCLUDE
 #include "atom.dm"
+#include "client.dm"
 #include "defaults.dm"
 #include "map_3.dmm"
 #include "fonts.dms"
 #include "areas\areas.dm"
+#include "datum\name_lists.dm"
 #include "datum\names.dm"
 #include "datum\stats.dm"
 #include "datum\materials\materials.dm"

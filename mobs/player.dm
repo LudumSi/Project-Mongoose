@@ -37,3 +37,9 @@
 	verb/say(msg as text)
 		view() << "[src.name] says \"[msg]\" "
 
+	verb/lay()
+		if(laying == 1)
+			getup()
+		else if(laying == 0)
+			laydown()
+

@@ -1,10 +1,18 @@
 stat
-	var/value = 0
-	var/max_value = 0
 
-	New(n)
-		if(n)
-			value = n
-			max_value = n
+	var/value
+	var/max_value
 
-	proc/Add(n)value = min(max(value + n, 0), max_value)
+	New(value,max)
+		src.value = value
+		src.max_value = max
+
+	proc/Add(n)
+		value = min(max(value + n, 0), max_value)
+
+
+
+
+
+
+

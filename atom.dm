@@ -1,6 +1,6 @@
 atom
 
-	var/startHP
+	var/startHP = 10
 	var/stat/HP
 
 	New()
