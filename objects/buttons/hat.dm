@@ -9,7 +9,7 @@ obj/buttons/hat
 		if(!(usr.holding == null))
 			if(usr.hat == null)
 				if("hat" in I.slots)
-					I.equip(2)
+					I.equip("clothes")
 		else
 			if(!(H == null))
 				H.unequip()

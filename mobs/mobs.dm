@@ -29,24 +29,26 @@ mob
 	proc/overlayset()
 		var/L[2]
 		if(clothes)
-			L += image(clothes.icon,icon_state = clothes.icon_state)
+			L += image(clothes.icon,icon_state = clothes.equip_state)
 		if(hat)
-			L += image(hat.icon,icon_state = clothes.icon_state)
+			L += image(hat.icon,icon_state = clothes.equip_state)
 		overlays = L
 
-	proc/laydown() //TODO: Fix clothes
-		usr.icon = turn(usr.icon,90)
+	proc/laydown() //Matrices fixed the clothing issue... go figure
+		var/matrix/M = matrix()
+		M.Turn(90)
+		src.transform = M
 		laying = 1
 
 	proc/getup()
-		usr.icon = turn(usr.icon,-90)
+		var/matrix/M = matrix()
+		src.transform = M
 		laying = 0
 
 	destroyme()
 		laydown()
 		paralyzed = 1
 		alive = 0
-
 
 	proc/lifeLoop()
 		hunger.value -= 1

@@ -9,10 +9,11 @@ obj/buttons/clothes
 		if(!(usr.holding == null))
 			if(usr.clothes == null)
 				if("clothes" in I.slots)
-					I.equip(1)
+					I.equip("uniform")
 		else
 			if(!(C == null))
-				C.unequip(1)
+				C.unequip()
+
 
 
 

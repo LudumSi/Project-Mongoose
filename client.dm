@@ -1,6 +1,8 @@
 client
 
 	Move()
+		if(mob.alive == 0)
+			return
 		if(mob.paralyzed == 1)
 			return
 		if(mob.laying == 1)

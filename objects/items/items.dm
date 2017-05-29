@@ -5,7 +5,10 @@ obj/items
 
 	var/pickup = 1
 	var/list/properties
+
 	var/list/slots
+	var/current_slot
+
 	var/equip_state = null
 	var/equiped = 0
 	var/size = 3
@@ -46,23 +49,25 @@ obj/items
 		usr.client.screen -= src
 		src.loc = usr.loc
 
-	proc/equip(slot)
+	proc/equip(slot)//At some point use bitmaps for slots...
 		drop()
-		if(slot == 1)
+		if(slot == "uniform")
 			usr.clothes = src
 			screen_loc = "6,1"
-		if(slot == 2)
+			current_slot = "uniform"
+		if(slot == "hat")
 			usr.hat = src
 			screen_loc = "5,1"
+			current_slot = "hat"
 		src.loc = usr
 		usr.client.screen += src
 		usr.overlayset()
 		pickup = 0
 
-	proc/unequip(slot)
-		if(slot == 1)
+	proc/unequip()
+		if(current_slot == "uniform")
 			usr.clothes = null
-		if(slot == 2)
+		if(current_slot == "hat")
 			usr.hat = null
 		usr.client.screen -= src
 		usr.overlayset()
