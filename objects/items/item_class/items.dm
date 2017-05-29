@@ -1,11 +1,11 @@
 obj/items
 
-	icon = 'items.dmi'
+	icon = 'objects/items/items.dmi'
 	density = 0
 
 	var/pickup = 1
 	var/list/properties
-	var/list/slots
+
 	var/equip_state = null
 	var/equiped = 0
 	var/size = 3
@@ -46,31 +46,6 @@ obj/items
 		usr.client.screen -= src
 		src.loc = usr.loc
 
-	proc/equip(slot)
-		drop()
-		if(slot == 1)
-			usr.clothes = src
-			screen_loc = "6,1"
-		if(slot == 2)
-			usr.hat = src
-			screen_loc = "5,1"
-		src.loc = usr
-		usr.client.screen += src
-		usr.overlayset()
-		pickup = 0
-
-	proc/unequip(slot)
-		if(slot == 1)
-			usr.clothes = null
-		if(slot == 2)
-			usr.hat = null
-		usr.client.screen -= src
-		usr.overlayset()
-		pickup = 1
-		src.loc = usr.loc
-		pickup()
-
-
 	proc/shift_inv_clicked()
 	proc/inv_clicked()
 
@@ -80,7 +55,7 @@ obj/items
 		if(get_dist(usr,src) <= 1)
 			if(usr.holding == null)
 				pickup()
-			else if(usr.holding == src)
+			else if(src.loc == usr)
 				if("shift" in params)
 					shift_inv_clicked()
 				else

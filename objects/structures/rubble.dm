@@ -1,6 +1,5 @@
 /obj/structures/rubble
 
-
 	name = "rubble"
 	desc = "A pile of wreckage"
 	icon_state = "rubble"

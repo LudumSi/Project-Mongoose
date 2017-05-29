@@ -8,11 +8,12 @@ obj/buttons/clothes
 		var/obj/items/C = usr.clothes
 		if(!(usr.holding == null))
 			if(usr.clothes == null)
-				if("clothes" in I.slots)
-					I.equip(1)
+				if(binaryFlagCheck(I.slots,E_SLOT_UNIFORM) == 1)
+					I.equip(E_SLOT_UNIFORM)
 		else
 			if(!(C == null))
-				C.unequip(1)
+				C.unequip()
+
 
 
 

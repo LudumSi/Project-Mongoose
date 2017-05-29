@@ -4,7 +4,7 @@ obj/structures/bars
 	desc = "A row of metal bars"
 
 	icon_state = "bars"
-	layer = 3.1
+	layer = 3.5
 
 	startHP = 2
 
