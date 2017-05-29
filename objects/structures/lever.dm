@@ -10,10 +10,11 @@ obj/structures/lever
 	var/range = 0
 
 	proc/signal(keyword)
+		var/w = world.time + 2
 		for(var/obj/structures/S in range(range))
 			if(S.signalop == 1)
 				if(S.keycode == keycode)
-					S.signaled(keyword)
+					spawn(w-world.time) S.signaled(keyword)
 
 	clicked()
 		if(position == 0)

@@ -1,12 +1,16 @@
-mob
+/*
+#define MOB_ALIVE 1
+#define MOB_PARALYZED 2
+#define MOB_LAYING 4
+*/
 
+mob
 	opacity = 0
 	density = 1
 	icon = 'mobs.dmi'
 	step_size = 32
 
-	var/alive = 1
-	var/laying = 0
+	var/conditions = 1
 
 	var/obj/items/holding = null
 	var/obj/items/clothes = null
@@ -17,9 +21,7 @@ mob
 	var/throwing = 0
 
 	var/stat/hunger
-	var/startHunger = 10
-
-	var/paralyzed = 0
+	var/startHunger = 5
 
 	var/move_delay = 2
 	var/tmp/move_time = 0
@@ -38,17 +40,17 @@ mob
 		var/matrix/M = matrix()
 		M.Turn(90)
 		src.transform = M
-		laying = 1
+		src.conditions = binaryFlagAdd(src.conditions,MOB_LAYING)
 
 	proc/getup()
 		var/matrix/M = matrix()
 		src.transform = M
-		laying = 0
+		src.conditions = binaryFlagRemove(src.conditions,MOB_LAYING)
 
 	destroyme()
 		laydown()
-		paralyzed = 1
-		alive = 0
+		src.conditions = binaryFlagAdd(src.conditions,MOB_ALIVE)
+		src.conditions = binaryFlagAdd(src.conditions,MOB_LAYING)
 
 	proc/lifeLoop()
 		hunger.value -= 1
@@ -60,7 +62,8 @@ mob
 		if(hunger.value == 0) //Will happen in about 8 minutes (For testing)
 			src << "<SPAN class=harm>You die of starvation!</SPAN>"
 			src.destroyme()
-		if(alive == 1)
+
+		if(binaryFlagCheck(conditions,MOB_ALIVE) == 1)
 			spawn(100) lifeLoop() //Every 10 seconds
 
 	Click()

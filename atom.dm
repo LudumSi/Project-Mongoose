@@ -54,6 +54,23 @@ atom
 				H.thrown(src)
 				usr.throwing = 0
 
+	proc/binaryFlagCheck(bits,var/value)
+		if( bits & value )
+			return 1
+		else
+			return 0
+
+	proc/binaryFlagAdd(bits,var/value)
+		bits = bits | value
+		return bits
+
+
+	proc/binaryFlagRemove(bits,var/value)
+		bits = bits & (~ value)
+		return bits
+
+
+
 
 
 

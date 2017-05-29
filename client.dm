@@ -1,11 +1,18 @@
 client
 
+	//Not under atom :(
+	proc/binaryFlagCheck(flag,var/value)
+		if( flag & value )
+			return 1
+		else
+			return 0
+
 	Move()
-		if(mob.alive == 0)
+		if(binaryFlagCheck(mob.conditions,MOB_ALIVE) == 0)
 			return
-		if(mob.paralyzed == 1)
+		if(binaryFlagCheck(mob.conditions,MOB_LAYING) == 1)
 			return
-		if(mob.laying == 1)
+		if(binaryFlagCheck(mob.conditions,MOB_PARALYZED) == 1)
 			return
 		if(world.time < mob.move_time)//Used to have "&lt;" Apparently means "And less than"? "<" works fine...
 			return

@@ -8,8 +8,8 @@ obj/buttons/hat
 		var/obj/items/H = usr.hat
 		if(!(usr.holding == null))
 			if(usr.hat == null)
-				if("hat" in I.slots)
-					I.equip("clothes")
+				if(binaryFlagCheck(I.slots,E_SLOT_HAT) == 1)
+					I.equip(E_SLOT_HAT)
 		else
 			if(!(H == null))
 				H.unequip()

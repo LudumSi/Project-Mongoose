@@ -4,7 +4,7 @@ obj/structures/rebar
 	desc = "A grille made of rusted metal rods"
 
 	icon_state = "rebar"
-	layer = 3.1
+	layer = 3.5
 
 	startHP = 2
 

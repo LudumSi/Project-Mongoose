@@ -1,5 +1,5 @@
 /obj/items/equipment/uniform
 
-	slots = list("clothes")
+	slots = 1
 	icon_state = "uniform"
 	equip_state = "uniform_e"

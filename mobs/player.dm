@@ -1,4 +1,4 @@
-/mob/player
+mob/player
 
 	desc = "A human bean"
 	icon_state = "player"
@@ -13,8 +13,9 @@
 		src.client.screen += new/obj/buttons/clothes
 		//src.client.screen += new/obj/buttons/hat
 		src.client.screen += new/obj/buttons/throwing
+
 		var/obj/items/equipment/peasant/P = new(src.loc)
-		P.equip("uniform")
+		P.equip(E_SLOT_UNIFORM)
 
 		loc = locate(/turf/floors/spawn)
 
@@ -38,8 +39,11 @@
 		view() << "[src.name] says \"[msg]\" "
 
 	verb/lay()
-		if(laying == 1)
+
+		if(binaryFlagCheck(src.conditions,MOB_LAYING) == 1)
 			getup()
-		else if(laying == 0)
+
+		else if(binaryFlagCheck(src.conditions,MOB_LAYING) == 0)
 			laydown()
+
 

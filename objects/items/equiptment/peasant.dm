@@ -4,5 +4,5 @@
 	desc = "Wow, it must SUCK to be you!"
 	icon_state = "peasant_item"
 
-	slots = list("clothes")
+	slots = 1
 	equip_state = "peasant"

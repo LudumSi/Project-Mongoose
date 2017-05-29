@@ -13,6 +13,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
+#include "_Defines.dm"
 #include "atom.dm"
 #include "client.dm"
 #include "defaults.dm"
@@ -36,7 +37,6 @@
 #include "objects\items\ball.dm"
 #include "objects\items\bricks.dm"
 #include "objects\items\hammer.dm"
-#include "objects\items\items.dm"
 #include "objects\items\paper.dm"
 #include "objects\items\rods.dm"
 #include "objects\items\scrap.dm"
@@ -48,6 +48,8 @@
 #include "objects\items\equiptment\equipment.dm"
 #include "objects\items\equiptment\peasant.dm"
 #include "objects\items\equiptment\uniform.dm"
+#include "objects\items\item_class\item_equips.dm"
+#include "objects\items\item_class\items.dm"
 #include "objects\spawners\one_type.dm"
 #include "objects\spawners\spawners.dm"
 #include "objects\structures\bars.dm"
