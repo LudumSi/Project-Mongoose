@@ -7,6 +7,9 @@ mob/player
 
 		gender = input("Select a gender for your character.","Your Gender",gender) in list("male","female","neuter")
 
+		var/tone = rand(0,128)
+		src.icon *= rgb(255-tone,220-tone,177-tone)
+
 		src.client.screen += new/obj/buttons/holding
 		src.client.screen += new/obj/buttons/second
 		src.client.screen += new/obj/buttons/drop
@@ -20,6 +23,15 @@ mob/player
 		loc = locate(/turf/floors/spawn)
 
 		overlayset()
+
+		if(prob(25) == 1)
+			src.languages.Add("Gutterspeak")
+		if(prob(50) == 1)
+			src.languages.Add("Chinese")
+		if(prob(1) == 1)
+			src.languages.Add("Boffin")
+		if(prob(2) == 1)
+			src.languages.Add("Russian")
 
 		var/names/N = new(gender)
 		name = N.name
@@ -36,14 +48,37 @@ mob/player
 			usr << "<SPAN CLASS=examine> \icon[src.clothes] They are wearing [src.clothes] </SPAN>"
 
 	verb/say(msg as text)
-		view() << "[src.name] says \"[msg]\" "
+		for(var/mob/listener in hearers())
+			if(src.language in listener.languages)
+				listener << "[src.name] says \"[msg]\" "
+			else
+				listener << "[src.name] says something in [src.language]"
 
 	verb/lay()
+
+		if(binaryFlagCheck(src.conditions,MOB_PARALYZED) == 1)
+			return
 
 		if(binaryFlagCheck(src.conditions,MOB_LAYING) == 1)
 			getup()
 
 		else if(binaryFlagCheck(src.conditions,MOB_LAYING) == 0)
 			laydown()
+
+	verb/change_language()
+
+		if(src.languages.len > 1)
+			src.language = input("What language are you speaking?","Your language") as anything in src.languages
+			usr << "<SPAN CLASS=examine> You switch to speaking [src.language] </SPAN>"
+		else
+			usr << "<SPAN CLASS=examine> You only speak one language! </SPAN>"
+
+	clicked()
+		var/obj/items/H = usr.holding
+		for(var/I in H.properties)
+			if(I == "edible")
+				if(usr == src)
+					eat(H)
+
 
 

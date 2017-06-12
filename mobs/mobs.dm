@@ -20,6 +20,10 @@ mob
 	var/actvhand = 1
 	var/throwing = 0
 
+	var/language = "English"
+	var/list/languages
+	languages = list("English")
+
 	var/stat/hunger
 	var/startHunger = 100 //Calculations: Time untill death = StartHunger * 100tics (1 tic = 1/10 of a second). 100 give about 16 minutes
 
@@ -27,6 +31,15 @@ mob
 	var/tmp/move_time = 0
 
 	proc/clicked()
+
+	proc/eat(target)
+		var/obj/items/H = target
+		usr << "<SPAN CLASS=examine> You nibble on [H] <SPAN CLASS=examine>"
+		hunger.Add(H.foodValue)
+		H.eaten()
+		H.bites --
+		if(H.bites <= 0)
+			H.destroyme()
 
 	proc/overlayset()
 		var/L[2]
@@ -47,13 +60,19 @@ mob
 		src.transform = M
 		src.conditions = binaryFlagRemove(src.conditions,MOB_LAYING)
 
+	proc/stunme(stuntime)
+		laydown()
+		src.conditions = binaryFlagAdd(src.conditions,MOB_PARALYZED)
+		sleep(stuntime)
+		getup()
+		src.conditions = binaryFlagRemove(src.conditions,MOB_PARALYZED)
+
+
 	destroyme()
 		laydown()
 		src.conditions = binaryFlagAdd(src.conditions,MOB_ALIVE)
-		src.conditions = binaryFlagAdd(src.conditions,MOB_LAYING)
 
 	proc/lifeLoop()
-		usr << "Subtracted! [world.time]"
 		hunger.value -= 1
 
 		if(hunger.value == startHunger/2)
@@ -72,8 +91,9 @@ mob
 
 	Click()
 		..()
-		if(get_dist(usr,src) <= 1)
-			clicked()
+		if(binaryFlagCheck(usr.conditions,MOB_PARALYZED) == 0)
+			if(get_dist(usr,src) <= 1)
+				clicked()
 
 	New()
 		..()

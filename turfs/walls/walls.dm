@@ -10,16 +10,24 @@ turf/walls
 
 	var/msg = null
 
+
+	proc/clean()
+		overlays = null
+		msg = null
+
 	Click()
 		..()
-		if(get_dist(usr,src) <= 1)
-			var/i
-			if(!(usr.holding == null))
-				for(i in usr.holding.properties)
-					if(i in src.destroy)
-						hurtme(1)
-			else
-				clicked()
+		if(binaryFlagCheck(usr.conditions,MOB_PARALYZED) == 0)
+			if(get_dist(usr,src) <= 1)
+				var/i
+				if(!(usr.holding == null))
+					for(i in usr.holding.properties)
+						if(i in src.destroy)
+							hurtme(1)
+						if(i == "clean")
+							clean()
+				else
+					clicked()
 
 	clicked()
 		if(istype(usr.holding,/obj/items/spraypaint))
