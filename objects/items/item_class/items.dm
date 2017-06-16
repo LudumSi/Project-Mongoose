@@ -52,16 +52,17 @@ obj/items
 	Click(location,control,params)
 		params=params2list(params)
 		..()
-		if(get_dist(usr,src) <= 1)
-			if(usr.holding == null)
-				pickup()
-			else if(src.loc == usr)
-				if("shift" in params)
-					shift_inv_clicked()
+		if(binaryFlagCheck(usr.conditions,MOB_PARALYZED) == 0)
+			if(get_dist(usr,src) <= 1)
+				if(usr.holding == null)
+					pickup()
+				else if(src.loc == usr)
+					if("shift" in params)
+						shift_inv_clicked()
+					else
+						inv_clicked()
 				else
-					inv_clicked()
-			else
-				clicked()
+					clicked()
 
 	destroyme()
 		del src
@@ -81,6 +82,19 @@ obj/items
 			step(src,get_dir(src,target),0)
 			oldDist -= 1
 			density = oldDense
+
+	proc/put(atom/target)
+		drop()
+		density = 1
+		step(src,get_dir(src,target),0)
+		if(src.loc == target.loc)
+			density = 0
+			return
+		else
+			step(src,get_dir(src,usr),0)
+			density = 0
+			pickup()
+
 
 
 

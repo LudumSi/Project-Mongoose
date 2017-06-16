@@ -5,6 +5,7 @@
 	icon_state = "rods"
 	stack_lim = 10
 
+	properties = list("pry")
 
 	Topic(href,href_list[])
 		switch(href_list["action"])

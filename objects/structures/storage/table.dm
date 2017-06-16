@@ -1,15 +1,14 @@
-obj/structures/table
+obj/structures/storage/table
 
 	name = "table"
 	desc = "A wooden table"
 	icon_state = "table_b"
 	layer = 2.9
+	open = 1
 
 	clicked()
 		if(!(usr.holding == null))
-			var/obj/items/I = usr.holding
-			I.drop()
-			I.loc = src.loc
+			usr.holding.put(src)
 
 	New()
 		..()
@@ -19,3 +18,4 @@ obj/structures/table
 			if(istype(src,I))
 				src.icon_state = "table"
 				return
+

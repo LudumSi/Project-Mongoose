@@ -10,16 +10,17 @@ obj/structures
 
 	Click()
 		..()
-		if(get_dist(usr,src) <= 1)
-			var/i
-			if(!(usr.holding == null))
-				for(i in usr.holding.properties)
-					if(i in src.destroy)
-						hurtme(1)
-						return
-				clicked()
-			else
-				clicked()
+		if(binaryFlagCheck(usr.conditions,MOB_PARALYZED) == 0)
+			if(get_dist(usr,src) <= 1)
+				var/i
+				if(!(usr.holding == null))
+					for(i in usr.holding.properties)
+						if(i in src.destroy)
+							hurtme(1)
+							return
+					clicked()
+				else
+					clicked()
 
 	examined()
 		if(HP.value == HP.max_value)
