@@ -8,7 +8,7 @@ obj/structures/storage/locker
 
 	janitorial
 		New()
-			contents.Add(new/obj/items/soap)
+			contents.Add(new/obj/items/food/soap)
 
 
 

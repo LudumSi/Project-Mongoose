@@ -18,11 +18,6 @@ obj/items
 	5 = huge
 	*/
 
-	var/foodValue = 0
-	proc/eaten()
-	var/bites = 0
-
-
 	verb/pickup()
 		set src in range(1)
 		if(pickup == 1)

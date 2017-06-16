@@ -25,7 +25,7 @@ mob
 	languages = list("English")
 
 	var/stat/hunger
-	var/startHunger = 100 //Calculations: Time untill death = StartHunger * 100tics (1 tic = 1/10 of a second). 100 give about 16 minutes
+	var/startHunger = 75 //Calculations: Time untill death = StartHunger * 100tics (1 tic = 1/10 of a second). 75 give about 12 minutes
 
 	var/move_delay = 2
 	var/tmp/move_time = 0
@@ -33,13 +33,14 @@ mob
 	proc/clicked()
 
 	proc/eat(target)
-		var/obj/items/H = target
+		var/obj/items/food/H = target
 		usr << "<SPAN CLASS=examine> You nibble on [H] <SPAN CLASS=examine>"
 		hunger.Add(H.foodValue)
 		H.eaten()
 		H.bites --
 		if(H.bites <= 0)
-			H.destroyme()
+			H.doneEating()
+			usr << "<SPAN CLASS=examine> All gone! </SPAN>"
 
 	proc/overlayset()
 		var/L[2]

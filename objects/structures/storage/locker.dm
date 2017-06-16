@@ -41,7 +41,7 @@ obj/structures/storage/locker
 			else
 				if(istype(usr.holding,/obj/items/writing/pen) == 1)
 					var/I = input("What do you label the locker?") as text
-					src.name += "\[[I]\]"
+					src.name += "locker \[[I]\]"
 
 
 	Cross(atom/movable/O)

@@ -1,4 +1,4 @@
-obj/items/soap
+obj/items/food/soap
 
 	name = "soap"
 	desc = "You recall long-repressed memories of your childhood"
