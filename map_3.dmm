@@ -10,7 +10,7 @@
 "j" = (/obj/items/spraypaint/random,/turf/floors/wasteland,/area)
 "k" = (/obj/structures/storage/locker/janitorial,/turf/floors/slab,/area)
 "l" = (/obj/structures/storage/locker/security,/turf/floors/slab,/area)
-"m" = (/obj/structures/storage/table,/turf/floors/slab,/area)
+"m" = (/obj/structures/storage/table,/obj/items/locks/code,/obj/items/locks/dna,/obj/items/key/blank,/obj/items/locks/key/random,/turf/floors/slab,/area)
 "n" = (/obj/structures/storage/table,/obj/items/canopener,/turf/floors/slab,/area)
 "o" = (/obj/structures/plants/grass,/turf/floors/wasteland,/area)
 "p" = (/obj/structures/rebar,/turf/floors/wasteland,/area)
@@ -27,14 +27,15 @@
 "A" = (/obj/structures/storage/table,/obj/items/paper{message = "Guide to doors:<p><ol><li>Open outer door</li><li>Close outer door</li><li>Open inner door</li><li>Close inner door</li><li>Profit</li></ol>"; name = "Guide to Doors"; written = 1},/obj/items/writing/pen,/turf/floors/slab,/area)
 "B" = (/obj/structures/rebar,/obj/structures/storage/table,/turf/floors/slab,/area)
 "C" = (/obj/structures/bars,/obj/structures/storage/table,/turf/floors/slab,/area)
-"D" = (/obj/structures/doors/big{keycode = "inner"},/turf/floors/slab,/area)
-"E" = (/obj/structures/doors/big{keycode = "outer"},/turf/floors/slab,/area)
-"F" = (/obj/structures/bars,/turf/floors/wasteland,/area)
-"G" = (/obj/structures/doors/big/bottom{keycode = "inner"},/turf/floors/slab,/area)
-"H" = (/obj/structures/doors/big/bottom{keycode = "outer"},/turf/floors/slab,/area)
-"I" = (/obj/spawners/rubble,/turf/floors/wasteland,/area)
-"J" = (/obj/items/stacks/rods,/turf/floors/wasteland,/area)
-"K" = (/turf/walls/concrete{msg = "a pinup of Red Lantern"},/area)
+"D" = (/obj/structures/storage/crate,/turf/floors/wasteland,/area)
+"E" = (/obj/structures/doors/big{keycode = "inner"},/turf/floors/slab,/area)
+"F" = (/obj/structures/doors/big{keycode = "outer"},/turf/floors/slab,/area)
+"G" = (/obj/structures/bars,/turf/floors/wasteland,/area)
+"H" = (/obj/structures/doors/big/bottom{keycode = "inner"},/turf/floors/slab,/area)
+"I" = (/obj/structures/doors/big/bottom{keycode = "outer"},/turf/floors/slab,/area)
+"J" = (/obj/spawners/rubble,/turf/floors/wasteland,/area)
+"K" = (/obj/items/stacks/rods,/turf/floors/wasteland,/area)
+"L" = (/turf/walls/concrete{msg = "a pinup of Red Lantern"},/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -221,14 +222,14 @@ aaaaaacdefpftoeeeeeeeotriudgdeeeeefvfffffffeeeeffdbbbbbbbaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaacdeepftoefffffeotdiwdgdeeeeefffeeefffffffffdbxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaacddddftttttyffeotdzAdgdeeeeefffeeefffffffffdbxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaacddddftfefffffeotdBCdddeeeeefffffffffffffffdxxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaacdffpftoefffffeotDttttEttttttttfettfftetfftdbxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaacdefFftoeeeeeeeftGttttHttttttttttfttteeetffdbxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaacdffpftoefDfffeotEttttFttttttttfettfftetfftdbxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaacdefGftoeeeeeeeftHttttIttttttttttfttteeetffdbxxxxxbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaacddddftoofoooooftddddddeeeeefffffeeeefffeeedbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaacdddfftttttttttttfdddgdeeeeeebbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaacdIfIfffffJfffffffIfdgdeeeeeebaabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaacdfIfIfdppKdqpdffIfIdgdeooooebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaacdIfIfddefddffddIfIfdgdeoooofbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaacdfIfIddffddefddfIfIdgdeoooofbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaacdJfJfffffKfffffffJfdgdeeeeeebaabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaacdfJfJfdppLdqpdffJfJdgdeooooebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaacdJfJfddefddffddJfJfdgdeoooofbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaacdfJfJddffddefddfJfJdgdeoooofbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaacddddddddddddddddddddgdeeeeebbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaccccccccccccccccccccccdeeeeebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

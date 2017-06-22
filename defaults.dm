@@ -8,3 +8,5 @@ world
 	view = 6 // show up to 7 tiles outward from center (15x15 view)
 	mob = /mob/player
 
+
+

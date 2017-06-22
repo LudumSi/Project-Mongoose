@@ -5,6 +5,12 @@ obj/structures/storage/locker
 
 	icon_state = "locker_c"
 
+	examined()
+		if(lock != null)
+			usr << "<SPAN class=examined> It has a [src.lock.name] on it</SPAN>"
+
+	var/obj/items/locks/lock = null
+
 	proc/toggle()
 
 		var/turf/T = src.loc
@@ -20,11 +26,18 @@ obj/structures/storage/locker
 				src.contents += M
 
 		else if(open == 0)
+
+			if(lock != null)
+				var/L = lock.lockCheck()
+				if(L != 1)
+					return
+
 			open = 1
 			density = 0
 			icon_state = "locker_o"
 
 			T.contents += src.contents
+			src.contents += src.lock
 
 
 
@@ -41,7 +54,13 @@ obj/structures/storage/locker
 			else
 				if(istype(usr.holding,/obj/items/writing/pen) == 1)
 					var/I = input("What do you label the locker?") as text
-					src.name += "locker \[[I]\]"
+					src.name = "locker \[[I]\]"
+				if(istype(usr.holding,/obj/items/locks))
+					if(src.lock == null)
+						var/obj/items/locks/H = usr.holding
+						src.lock = H
+						H.drop()
+						src.contents += H
 
 
 	Cross(atom/movable/O)

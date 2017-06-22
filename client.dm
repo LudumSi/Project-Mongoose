@@ -1,16 +1,20 @@
+var/const/ACTION_RATE = 30
+var/const/NO_ACTION = 0
+
 client
-
-	//Not under atom :(
-	proc/binaryFlagCheck(flag,var/value)
-		if( flag & value )
-			return 1
-		else
-			return 0
-
-	Move()
-		if(binaryFlagCheck(mob.conditions,MOB_LAYING) == 1)
-			return
-		if(world.time < mob.move_time)//Used to have "&lt;" Apparently means "And less than"? "<" works fine...
-			return
-		mob.move_time = world.time + mob.move_delay
-		return ..()
+    North()
+        mob.action = NORTH
+    South()
+        mob.action = SOUTH
+    East()
+        mob.action = EAST
+    West()
+        mob.action = WEST
+    Northeast()
+        return
+    Northwest()
+        return
+    Southeast()
+        return
+    Southwest()
+        return

@@ -12,13 +12,16 @@ mob
 
 	var/conditions = 1
 
+	var/DNA
+
 	var/obj/items/holding = null
 	var/obj/items/clothes = null
 	var/obj/items/hat = null
-	var/hand = null
-	var/hand2 = null
+	var/obj/items/hand = null
+	var/obj/items/hand2 = null
 	var/actvhand = 1
 	var/throwing = 0
+	var/atom/movable/pulling = null
 
 	var/language = "English"
 	var/list/languages
@@ -27,8 +30,9 @@ mob
 	var/stat/hunger
 	var/startHunger = 75 //Calculations: Time untill death = StartHunger * 100tics (1 tic = 1/10 of a second). 75 give about 12 minutes
 
-	var/move_delay = 2
-	var/tmp/move_time = 0
+	var/action_speed = 9 // ACTION_RATE/action_speed = tics. 30/10 gives 3
+	var/tmp/action = NO_ACTION
+	var/tmp/action_count
 
 	proc/clicked()
 
@@ -61,9 +65,15 @@ mob
 		src.transform = M
 		src.conditions = binaryFlagRemove(src.conditions,MOB_LAYING)
 
+	proc/dropitall()
+		hand.drop()
+		hand2.drop()
+
+
 	proc/stunme(stuntime)
 		laydown()
 		src.conditions = binaryFlagAdd(src.conditions,MOB_PARALYZED)
+		dropitall()
 		sleep(stuntime)
 		getup()
 		src.conditions = binaryFlagRemove(src.conditions,MOB_PARALYZED)
@@ -71,6 +81,7 @@ mob
 
 	destroyme()
 		laydown()
+		dropitall()
 		src.conditions = binaryFlagAdd(src.conditions,MOB_ALIVE)
 
 	proc/lifeLoop()
@@ -81,7 +92,7 @@ mob
 		if(hunger.value == startHunger/5)
 			src << "<SPAN class=harm>You really need to eat!</SPAN>"
 		if(hunger.value == 0) //Will happen in about 8 minutes (For testing)
-			src << "<SPAN class=harm>You die of starvation! [world.time]</SPAN>"
+			src << "<SPAN class=harm>You die of starvation!</SPAN>"
 			src.destroyme()
 
 		if(binaryFlagCheck(src.conditions,MOB_ALIVE) == 1)
@@ -90,14 +101,46 @@ mob
 			return
 		return //Just to make sure...
 
-	Click()
+	proc/stopPulling()
+		src.pulling = null
+		for(var/obj/buttons/I in src.client.screen)
+			if(istype(I,/obj/buttons/pulling))
+				del I
+
+
+	proc/moveLoop()
+		src.action_count += src.action_speed
+		if(action_count >= ACTION_RATE)
+			action_count -= ACTION_RATE
+			if(action)
+				if(binaryFlagCheck(src.conditions,MOB_LAYING) == 0)
+					var/old_loc = src.loc
+					step(src,action)
+					if(pulling != null)
+						if(get_dist(src,pulling) <= 2)
+							step(pulling,get_dir(pulling,old_loc))
+						else
+							stopPulling()
+			action = NO_ACTION
+		spawn(1) moveLoop()
+		return
+
+
+	Click(location,control,params)
 		..()
+		params=params2list(params)
 		if(binaryFlagCheck(usr.conditions,MOB_PARALYZED) == 0)
 			if(get_dist(usr,src) <= 1)
-				clicked()
+				if("ctrl" in params)
+					if( usr != src )
+						usr.pulling = src
+						usr.client.screen += new/obj/buttons/pulling
+				else
+					clicked()
 
 	New()
 		..()
 		hunger = new(startHunger)
 		lifeLoop()
+		moveLoop()
 

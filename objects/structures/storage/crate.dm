@@ -4,6 +4,8 @@ obj/structures/storage/crate
 	desc = "Watch out for splinters"
 	icon_state = "crate_c"
 
+	anchored = 0
+
 	open = 0
 
 	clicked()
@@ -13,6 +15,9 @@ obj/structures/storage/crate
 				icon_state = "crate_o"
 				var/obj/items/stacks/planks/P = new(usr.loc)
 				P.stack = 1
+			else if(istype(usr.holding,/obj/items/writing/pen) == 1)
+				var/I = input("What do you label the crate?") as text
+				src.name = "crate \[[I]\]"
 		else
 			if(usr.holding == null)
 				usr << "<SPAN class=examine>You root around in the crate</SPAN>"
@@ -24,9 +29,6 @@ obj/structures/storage/crate
 					open = 0
 					icon_state = "crate_c"
 					P.stack_take(1)
-			else if(istype(usr.holding,/obj/items/writing/pen) == 1)
-				var/I = input("What do you label the crate?") as text
-				src.name += "locker \[[I]\]"
 			else
 				var/obj/items/H = usr.holding
 				if(contents.len < 20)

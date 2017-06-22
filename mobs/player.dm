@@ -3,6 +3,8 @@ mob/player
 	desc = "A human bean"
 	icon_state = "player"
 
+
+
 	Login()
 
 		gender = input("Select a gender for your character.","Your Gender",gender) in list("male","female","neuter")
@@ -32,6 +34,8 @@ mob/player
 			src.languages.Add("Boffin")
 		if(prob(2) == 1)
 			src.languages.Add("Russian")
+
+		DNA = rand(10000,99999)
 
 		var/names/N = new(gender)
 		name = N.name

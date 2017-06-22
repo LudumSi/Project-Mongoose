@@ -9,3 +9,5 @@ obj/structures/doors/metal
 	openState = "metal_open"
 	middleState = "metal_middle"
 	transparent = 1
+
+	lockable = 1

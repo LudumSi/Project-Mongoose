@@ -54,7 +54,10 @@ obj/items
 		..()
 		if(binaryFlagCheck(usr.conditions,MOB_PARALYZED) == 0)
 			if(get_dist(usr,src) <= 1)
-				if(usr.holding == null)
+				if("ctrl" in params)
+					usr.pulling = src
+					usr.client.screen += new/obj/buttons/pulling
+				else if(usr.holding == null)
 					pickup()
 				else if(src.loc == usr)
 					if("shift" in params)

@@ -15,10 +15,10 @@ obj/structures/storage/locker
 obj/structures/storage/crate
 
 	beans
-	name = "crate \[beans]"
-	New()
-		for(var/i=0,i<20,i++)
-			contents.Add(new/obj/items/food/beans)
+		name = "crate \[beans]"
+		New()
+			for(var/i=0,i<20,i++)
+				contents.Add(new/obj/items/food/beans)
 
 
 
