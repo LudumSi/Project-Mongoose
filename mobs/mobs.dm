@@ -10,6 +10,10 @@ mob
 	icon = 'mobs.dmi'
 	step_size = 32
 
+	startHP = 100
+
+	var/intent = 0 //0 is help, 1 is harm
+
 	var/conditions = 1
 
 	var/DNA
@@ -34,7 +38,48 @@ mob
 	var/tmp/action = NO_ACTION
 	var/tmp/action_count
 
+	var/cutArm = 0
+	var/impArm = 0
+	var/crushArm = 0
+
+	var/bruteDmg = 0
+
+	var/bleed = 0
+
+	hurtme(amt,dmgkind)
+		HP.value -= amt
+		if(dmgkind == "brute")
+			bruteDmg += amt
+		if(HP.value <= 0)
+			destroyme()
+
+	healme(amt,dmgkind)
+		HP.Add(amt)
+		if(dmgkind == "brute")
+			bruteDmg -= amt
+
+	proc/attackme(dmg,dmgtype,pierce)
+		if(dmgtype == "imp")
+			hurtme(dmg*(1/impArm),"brute")
+			bleed += dmg/8
+		if(dmgtype == "cut")
+			hurtme(dmg*(1/cutArm),"brute")
+			bleed += dmg/4
+		if(dmgtype == "crush")
+			hurtme(dmg*(1/crushArm),"brute")
+
+
 	proc/clicked()
+		if(istype(usr.holding,/obj/items))
+			if(istype(usr.holding,/obj/items/bandage))
+				src.bleed = 0
+				usr << "<SPAN class=examine>You quench the bleeding</SPAN>"
+				del usr.holding
+			if(usr.holding.maxDmg != 0)
+				attackme(rand(usr.holding.minDmg,usr.holding.maxDmg),usr.holding.damageType,usr.holding.armorPierce)
+				src << "<SPAN class=harm>[usr] hits you with the [usr.holding]!</SPAN>"
+
+
 
 	proc/eat(target)
 		var/obj/items/food/H = target
@@ -78,6 +123,10 @@ mob
 		getup()
 		src.conditions = binaryFlagRemove(src.conditions,MOB_PARALYZED)
 
+	proc/bleed()
+		hurtme(bleed,"bleed")
+		var/obj/structures/blood/B = new(src.loc)
+		B.DNA = src.DNA
 
 	destroyme()
 		laydown()
@@ -95,8 +144,12 @@ mob
 			src << "<SPAN class=harm>You die of starvation!</SPAN>"
 			src.destroyme()
 
+		if(bleed > 0)
+			usr.bleed()
+
 		if(binaryFlagCheck(src.conditions,MOB_ALIVE) == 1)
 			spawn(100) lifeLoop() //Every 10 seconds
+
 		else
 			return
 		return //Just to make sure...

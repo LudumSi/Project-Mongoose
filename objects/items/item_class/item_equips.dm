@@ -11,6 +11,9 @@ obj/items
 	var/slots = 0
 	var/current_slots = 0
 
+	proc/equiped()
+	proc/unequiped()
+
 	proc/equip(attempt) //At some point use bitmaps for slots...
 		drop()
 
@@ -28,8 +31,10 @@ obj/items
 		usr.client.screen += src
 		usr.overlayset()
 		pickup = 0
+		equiped()
 
-	proc/unequip()
+	proc/unequip(pickup)
+
 		if(binaryFlagCheck(current_slots,E_SLOT_UNIFORM) == 1)
 			usr.clothes = null
 			current_slots = binaryFlagRemove(current_slots,E_SLOT_UNIFORM)
@@ -42,4 +47,7 @@ obj/items
 		usr.overlayset()
 		pickup = 1
 		src.loc = usr.loc
-		pickup()
+		unequiped()
+
+		if(pickup == 1)
+			pickup()

@@ -32,7 +32,7 @@ obj/structures
 	examined()
 		if(HP.value == HP.max_value)
 			usr << "<SPAN CLASS=examine> It looks undamaged </SPAN>"
-		else if(HP.value << HP.max_value)
+		else if(HP.value < HP.max_value)
 			if(HP.value >= (HP.max_value/2))
 				usr << "<SPAN CLASS=examine> It looks slightly beat-up </SPAN>"
 			if(HP.value << (HP.max_value/2))

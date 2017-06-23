@@ -18,6 +18,7 @@ mob/player
 		src.client.screen += new/obj/buttons/clothes
 		//src.client.screen += new/obj/buttons/hat
 		src.client.screen += new/obj/buttons/throwing
+		src.client.screen += new/obj/buttons/health
 
 		var/obj/items/equipment/peasant/P = new(src.loc)
 		P.equip(E_SLOT_UNIFORM)
@@ -78,6 +79,7 @@ mob/player
 			usr << "<SPAN CLASS=examine> You only speak one language! </SPAN>"
 
 	clicked()
+		..()
 		var/obj/items/H = usr.holding
 		for(var/I in H.properties)
 			if(I == "edible")

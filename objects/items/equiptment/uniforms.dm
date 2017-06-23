@@ -8,3 +8,11 @@
 
 		icon_state = "sec"
 		equip_state = "sec_e"
+
+		equiped()
+			usr.cutArm += 10
+			usr.impArm += 10
+
+		unequiped()
+			usr.cutArm -= 10
+			usr.impArm -= 10

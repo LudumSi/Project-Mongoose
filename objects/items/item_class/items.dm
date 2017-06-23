@@ -10,6 +10,12 @@ obj/items
 	var/equiped = 0
 	var/size = 3
 	var throwing = 0
+
+	var/minDmg = 0
+	var/maxDmg = 0
+	var/damageType = null
+	var/armorPierce = 0
+
 	/*
 	1= tiny
 	2= small
